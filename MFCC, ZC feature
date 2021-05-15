@@ -1,14 +1,24 @@
 import librosa
 import librosa.display
 import matplotlib.pyplot as plt
-name = librosa.example('trumpet')
+name = librosa.example('brahms')
 y,sr = librosa.load(name)
+
 mfccs = librosa.feature.mfcc(y)
 print(mfccs)
 librosa.display.specshow(mfccs, sr=sr, x_axis='time')
 plt.show()
+
 n0 = 2000
 n1= 2100
 zc = librosa.zero_crossings(y[n0:n1], pad= false)
 print(sum(zc))
+plt.plot(y[n0:n1])
+plt.grid()
+plt.show()
+
+
+
+
+
 
