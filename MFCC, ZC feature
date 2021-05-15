@@ -7,3 +7,8 @@ mfccs = librosa.feature.mfcc(y)
 print(mfccs)
 librosa.display.specshow(mfccs, sr=sr, x_axis='time')
 plt.show()
+n0 = 2000
+n1= 2100
+zc = librosa.zero_crossings(y[n0:n1], pad= false)
+print(sum(zc))
+
