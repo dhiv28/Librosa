@@ -1,0 +1,9 @@
+import librosa
+import librosa.display
+import matplotlib.pyplot as plt
+name = librosa.example('trumpet')
+y,sr = librosa.load(name)
+mfccs = librosa.feature.mfcc(y)
+print(mfccs)
+librosa.display.specshow(mfccs, sr=sr, x_axis='time')
+plt.show()
