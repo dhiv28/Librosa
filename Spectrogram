@@ -1,8 +1,7 @@
 import librosa as lib
 import librosa.display
 import matplotlib.pyplot as plt
-name = lib.example('brahms')
-y,sr = lib.load(name)
+y = lib.tone(440, s=22050, length=22050)
 ft = lib.stft(y)
 spec= np.abs(ft)
 spec= lib.amplitude_to_db(spec, ref=np.max)
@@ -13,6 +12,7 @@ plt.show()
 mel_spect = lib.eature.melspectrogram(y=y,sr=sr, n_fft=1024, hop_length=512)
 mel_spect= lib.power_to_db(melspect, ref=np.max)
 librosa.display.specshow(mel_spect, y_axis='mel', fmax=8000, x_axis='time')
+plt.title('mel spectrogram')
 plt.show()
 
 
