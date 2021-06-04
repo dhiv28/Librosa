@@ -9,7 +9,7 @@ librosa.display.specshow(spec, sr=sr, x_Axis='time', y_axis='log')
 plt.title('spectogram')
 plt.show()
 
-mel_spect = lib.eature.melspectrogram(y=y,sr=sr, n_fft=1024, hop_length=512)
+mel_spect = lib.feature.melspectrogram(y=y,sr=sr, n_fft=1024, hop_length=512)
 mel_spect= lib.power_to_db(melspect, ref=np.max)
 librosa.display.specshow(mel_spect, y_axis='mel', fmax=8000, x_axis='time')
 plt.title('mel spectrogram')
