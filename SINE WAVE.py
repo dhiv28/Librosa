@@ -21,9 +21,6 @@ def unit_step(a,b, n):
             else:
                 unit.append(1)
     return(unit) 
-UL = 15
-LL = 0
-n = np.arange(LL, UL, dt)
 u1 = unit_step(0 , 10 ,t) 
 u2 = unit_step(10, 20, t)
 u3 = unit_step(20, 30, t)
