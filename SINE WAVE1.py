@@ -8,7 +8,6 @@ f2 = 2800
 f3 = 3600
 fs = 10000
 dt = 1/fs
-t = np.arange(0,15,dt)
 t1 = np.arange(0, 5, dt)
 t2 = np.arange(5, 10, dt)
 t3 = np.arange(10, 15, dt)
